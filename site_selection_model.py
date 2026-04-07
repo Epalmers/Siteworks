@@ -28,7 +28,7 @@ def main():
 
     # Natural Hazards Risk
     df["Hazards"] = df[
-        ["Flood Risk", "Tornado Frequency", "Wildlife Hazard", "Winter Weather Disruption"]
+        ["Flood Risk", "Tornado Frequency", "Wildlife Hazard", "Winter Weather Disruption", "Seismic Hazard"]
     ].mean(axis=1)
 
     # Biodiversity Risk
