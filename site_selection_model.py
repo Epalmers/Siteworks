@@ -13,26 +13,26 @@ def main():
 
     # Hydrological & Regulatory Risk
     df["Hydro_Reg"] = df[
-        ["Baseline Water Stress", "Annual Precipitation", "Recycled Water Infrastructure"]
+        ["Baseline Water Stress (Ranked)", "Annual Precipitation (Ranked)", "Recycled Water Infrastructure (Ranked)"]
     ].mean(axis=1)
 
     # Climate & Operational Physics
     df["Climate_Op"] = df[
-        ["Cooling Degree Days", "Annual Mean Humidity", "Grid Carbon Intensity", "Renewable Energy Mix"]
+        ["Cooling Degree Days (Ranked)", "Annual Mean Humidity (Ranked)", "Grid Carbon Intensity (Ranked)", "Renewable Energy Mix (Ranked)"]
     ].mean(axis=1)
 
     # Economic & Social Impact
     df["Econ_Social"] = df[
-        ["Industrial Electricity Rate", "Water & Sewer Cost", "Environmental Justice Index"]
+        ["Industrial Electricity Rate (Ranked)", "Water & Sewer Cost (Ranked)", "Environmental Justice Index (Ranked)"]
     ].mean(axis=1)
 
     # Natural Hazards Risk
     df["Hazards"] = df[
-        ["Flood Risk", "Tornado Frequency", "Wildlife Hazard", "Winter Weather Disruption", "Seismic Hazard"]
+        ["Flood Risk", "Tornado Frequency (Ranked)", "Wildlife Hazard (Ranked)", "Winter Weather Disruption (Ranked)", "Seismic Hazard (Ranked)"]
     ].mean(axis=1)
 
     # Biodiversity Risk
-    df["Biodiversity"] = df["Protected Area Proximity"]
+    df["Biodiversity"] = df["Protected Area Proximity (Ranked)"]
 
     # -----------------------------
     # 3. USER-DEFINED WEIGHTS
